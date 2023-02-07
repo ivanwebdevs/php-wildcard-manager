@@ -52,6 +52,14 @@ if (file_exists($server)){
             echo file_get_contents("$basename");
             die();
         }
+        else{
+            $dirname = dirname($path);
+            $basename = basename($path);
+            chdir($dirname);
+            
+            echo file_get_contents("$basename");
+            die();
+        }
         
     }
     else{
